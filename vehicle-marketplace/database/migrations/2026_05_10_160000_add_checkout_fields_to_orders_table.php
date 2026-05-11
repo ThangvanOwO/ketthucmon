@@ -9,12 +9,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('orders', function (Blueprint $table) {
-            $table->string('customer_name', 255)->after('code');
-            $table->string('phone', 20)->after('customer_name');
-            $table->string('email', 255)->after('phone');
-            $table->string('address', 500)->after('email');
-            $table->string('payment_method', 50)->default('cod')->after('address');
-            $table->text('note')->nullable()->after('payment_method');
+            // Note: removed ->after() for PostgreSQL compatibility
+            $table->string('customer_name', 255);
+            $table->string('phone', 20);
+            $table->string('email', 255);
+            $table->string('address', 500);
+            $table->string('payment_method', 50)->default('cod');
+            $table->text('note')->nullable();
         });
     }
 
