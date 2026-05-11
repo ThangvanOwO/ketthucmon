@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kinetic Apex-V | Xe Cụ Thể</title>
+<!-- Google Fonts: Space Grotesk & Manrope -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config from Design System -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#121416",
+                    "primary-container": "#2962ff",
+                    "on-background": "#e2e2e5",
+                    "on-primary-fixed-variant": "#003ab3",
+                    "inverse-primary": "#004ee8",
+                    "outline": "#8d90a2",
+                    "on-tertiary-fixed": "#001f24",
+                    "inverse-surface": "#e2e2e5",
+                    "on-primary-fixed": "#001550",
+                    "secondary": "#c1c6d7",
+                    "primary": "#b6c4ff",
+                    "tertiary-fixed-dim": "#00daf3",
+                    "tertiary": "#00daf3",
+                    "surface-dim": "#121416",
+                    "surface-tint": "#b6c4ff",
+                    "surface": "#121416",
+                    "on-tertiary": "#00363d",
+                    "outline-variant": "#434656",
+                    "on-tertiary-container": "#e6fbff",
+                    "on-tertiary-fixed-variant": "#004f58",
+                    "on-secondary-container": "#b3b8c8",
+                    "secondary-fixed-dim": "#c1c6d7",
+                    "on-error": "#690005",
+                    "surface-container-lowest": "#0c0e10",
+                    "primary-fixed": "#dce1ff",
+                    "error-container": "#93000a",
+                    "surface-container-highest": "#333537",
+                    "surface-container-low": "#1a1c1e",
+                    "on-surface-variant": "#c3c5d8",
+                    "tertiary-container": "#007d8c",
+                    "primary-fixed-dim": "#b6c4ff",
+                    "on-primary": "#002780",
+                    "secondary-container": "#444956",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#414754",
+                    "on-secondary": "#2b303d",
+                    "tertiary-fixed": "#9cf0ff",
+                    "surface-bright": "#38393c",
+                    "surface-container": "#1e2022",
+                    "error": "#ffb4ab",
+                    "surface-container-high": "#282a2c",
+                    "secondary-fixed": "#dde2f3",
+                    "on-primary-container": "#f7f5ff",
+                    "surface-variant": "#333537",
+                    "on-secondary-fixed": "#161c27",
+                    "inverse-on-surface": "#2f3133",
+                    "on-surface": "#e2e2e5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk", "sans-serif"],
+                    "body": ["Manrope", "sans-serif"],
+                    "label": ["Manrope", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-zinc-950/60 backdrop-blur-2xl sticky top-0 w-full z-50 shadow-[0_20px_50px_rgba(182,196,255,0.05)] border-b-0">
+<div class="flex justify-between items-center max-w-[1440px] mx-auto px-8 py-5">
+<!-- Brand Logo -->
+<a class="text-2xl font-bold tracking-tighter text-[#b6c4ff] font-['Space_Grotesk'] tracking-tight" href="#">
+                KINETIC
+            </a>
+<!-- Navigation Links -->
+<div class="hidden md:flex gap-8 items-center font-['Space_Grotesk'] tracking-tight">
+<a class="text-[#b6c4ff] font-bold border-b-2 border-[#00daf3] pb-1 hover:bg-zinc-800/50 transition-all duration-300 active:scale-95 ease-in-out" href="#">Ô tô</a>
+<a class="text-zinc-400 font-medium hover:text-white hover:bg-zinc-800/50 transition-all duration-300 active:scale-95 ease-in-out" href="#">Xe máy</a>
+<a class="text-zinc-400 font-medium hover:text-white hover:bg-zinc-800/50 transition-all duration-300 active:scale-95 ease-in-out" href="#">Xe điện</a>
+<a class="text-zinc-400 font-medium hover:text-white hover:bg-zinc-800/50 transition-all duration-300 active:scale-95 ease-in-out" href="#">Phòng trưng bày</a>
+<a class="text-zinc-400 font-medium hover:text-white hover:bg-zinc-800/50 transition-all duration-300 active:scale-95 ease-in-out" href="#">Giới thiệu</a>
+</div>
+<!-- Search & Actions -->
+<div class="flex items-center gap-6">
+<!-- Implicit search bar placement as requested "on_right" but no specific search UI in JSON, just trailing actions -->
+<button class="text-[#b6c4ff] hover:text-white transition-colors">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button class="text-[#b6c4ff] hover:text-white transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-[1440px] mx-auto px-4 md:px-8 py-12 flex flex-col gap-24">
+<!-- Hero: Bento Grid Gallery & Info -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-6 w-full">
+<!-- Main Hero Image Area -->
+<div class="lg:col-span-8 bg-surface-container-high rounded-sm overflow-hidden h-[512px] md:h-[716px] relative group cursor-pointer transition-colors duration-300 hover:bg-surface-container-highest">
+<img alt="Kinetic Apex-V Front Quarter" class="w-full h-full object-cover object-center opacity-90 group-hover:opacity-100 transition-opacity duration-500" data-alt="Sleek, futuristic silver electric sports car parked in a minimalist dark studio setting with dramatic overhead lighting highlighting its aerodynamic curves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAdSUcPXcI-u__GNSfEullPa39Am1OGT-XX2P-V6TZ3DgDERIRl8IAC0DpZf224wrWl8lhU-LZ4qHwEAkl-KHsbXcnbKhD22o1f13RKub3Fho5Vfp88nb_Ld5vBMHH7w5N1yTBiEeLek5DahZFvDkJqFwxISdMD7BT2sq3yCf_wMl1NXJ11VRcI9rlQpgChUkiiNEz7UefX6nGBL4hlccnirl0qfUUHGzrwg8GWHVH_pT3wPgOwVMKljlVHlsqmljEEEROPobEQ3w2"/>
+<div class="absolute bottom-6 right-6 bg-surface-container/60 backdrop-blur-md px-4 py-2 rounded-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface">fullscreen</span>
+<span class="font-label text-sm text-on-surface tracking-wide uppercase">Xem Thư Viện</span>
+</div>
+</div>
+<!-- Product Info & Actions -->
+<div class="lg:col-span-4 flex flex-col justify-between bg-surface-container-lowest p-8 rounded-sm">
+<div class="space-y-6">
+<div class="space-y-2">
+<p class="font-label text-tertiary tracking-widest text-sm uppercase">Phiên bản 2025</p>
+<h1 class="font-headline text-5xl md:text-6xl font-bold tracking-tighter text-on-background leading-none">APEX-V</h1>
+<p class="font-body text-on-surface-variant text-lg mt-4">Đỉnh cao của kỹ thuật động học. Kiến trúc động cơ kép mang lại hiệu suất đường đua không khoan nhượng và ưu thế không khí thải.</p>
+</div>
+<div class="pt-8">
+<p class="font-label text-on-surface-variant text-sm mb-1">Bắt đầu từ</p>
+<p class="font-headline text-4xl text-primary font-medium tracking-tight">$142,500</p>
+</div>
+</div>
+<div class="space-y-4 mt-12 lg:mt-0">
+<button class="w-full bg-gradient-to-r from-primary-container to-primary text-on-primary font-headline font-bold text-lg py-4 rounded-sm flex justify-center items-center gap-2 hover:opacity-90 transition-opacity">
+                        Cấu hình &amp; Đặt hàng
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="w-full bg-transparent border border-outline-variant/30 text-primary font-headline font-medium py-4 rounded-sm hover:bg-surface-container-low transition-colors">
+                        Đăng ký lái thử
+                    </button>
+</div>
+</div>
+<!-- Secondary Gallery Thumbnails -->
+<div class="lg:col-span-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="bg-surface-container-low aspect-[16/9] rounded-sm overflow-hidden hover:bg-surface-container-high transition-colors duration-300 cursor-pointer">
+<img alt="Detail view" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" data-alt="Close-up detail of the futuristic LED taillight assembly of a dark grey sports car" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjG0GfmHxFlCFgP5HLoF62Bj3-clJmTwmLYC2ziIzDPd6cMvwvrK3o6NjHEE25tUoWLNkGx1iOsHhPd3fwnKH5HxoV8n2KiNwkq9ytmsV91HQ9uL8pP_8iXvrAwFg1OmqNx0jL-YcRFTmTwDrb-QavPlrzxYVQACprIglolYQd30eaI_0lpo19RGhrtKAZbRHC1RqH-lyV1hr-tLBBsQEJPd8GTfiPvv6HDrUH17wydMEjqcMsn9JWiRhig-6O0_-xjhyCQbvawlyp"/>
+</div>
+<div class="bg-surface-container-low aspect-[16/9] rounded-sm overflow-hidden hover:bg-surface-container-high transition-colors duration-300 cursor-pointer">
+<img alt="Interior view" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" data-alt="Interior view of a modern luxury car dashboard showing a minimalist digital cluster and sleek steering wheel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVUaTqoihjB8E1iF1YxSOrz8-OUI3wTNpzTtgMGAxrnqiOtSfUoOD5sbAguUa_iM3pC_nfVBrw_MzNGFozuWWxuPUt7DxNo6z5NNkf3SCiN_bWx6AhfK3u7YhsFZ_DeOrIXUdvYM83gbAED3dHz1LiSXGQl-2ljhQtZ2tJo6V814f-o4Dd1iR6xoG5hljyjeddEo3Nqgi0DwMzwiPnlMVnFadDjSwtxWtOaIvq-f3c142WQbQqmKyKnPJ6SdZaJWN7NZvQBsgsTmGA"/>
+</div>
+<div class="bg-surface-container-low aspect-[16/9] rounded-sm overflow-hidden hover:bg-surface-container-high transition-colors duration-300 cursor-pointer">
+<img alt="Wheel detail" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" data-alt="Close up of a large black aerodynamic alloy wheel with high performance brakes on a sports car" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6O56WZ7w3xrrLELMtZhhutuNhWRNfUjDFv8hbsQEncmm0ZK4ToWHKB_KlwdW9n_O3694Ax_7DDzSLhryMzP2ry7uBDQYDfTBBIE3ZcsAl5bQ7oS-xUlc7ybQ1OzoUP2pBqdb3x1xWN1K8GBYt0IDHO1ylMoEBycbywyrbPBOJRFO8j4_5iXT1DEOsC-F7i_APTWgIIyiCaPP7iG52QZPSSKj8a7K5PLQtzPLjn9yIbVQM6kZoRh7Wcn3AzKsQ8-sRULWCEkLZ6iAY"/>
+</div>
+<div class="bg-surface-container-low aspect-[16/9] rounded-sm overflow-hidden hover:bg-surface-container-high transition-colors duration-300 cursor-pointer flex items-center justify-center relative">
+<img alt="More images" class="w-full h-full object-cover opacity-30" data-alt="Blurred abstract shot of a dark sports car to serve as a background for text" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr6UAOekf2QiemvT2oNNbUn-lehygNgMoHjYeD40G_hCXCpStIXVJ8awrS3FcHwCaKoQ5iIg7IayjR0AVGLOYVqrkGRiuc9CYE0PbRWfmzU8kvRhQPw-hfcJ50HM6J3fNilFcZMYvVKnMwW0VoF7qRo3n6y9_ObNtxtdXONMA6PkXZOmAlvAwY7PGhhtxkCuJ6UBoB4fxPZqOxh4tR4J308lgLyLI14Kl1yKqbnZoWyhXUzpkOMOnga_sDbTEJF72sUNBR25PUKgFB"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="font-headline font-medium text-lg text-primary">+12 Xem Tất Cả</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Specifications: Tonal Layering -->
+<section class="bg-surface-container-low rounded-sm p-8 md:p-16">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
+<div>
+<h2 class="font-headline text-3xl font-bold text-on-background tracking-tight">Kiến Trúc Động Học</h2>
+<p class="font-body text-on-surface-variant mt-2 max-w-xl">Được rèn từ sợi carbon cấp hàng không vũ trụ và được cung cấp năng lượng bởi các tế bào pin thể rắn mật độ cao độc quyền của chúng tôi.</p>
+</div>
+<a class="mt-6 md:mt-0 font-label text-tertiary uppercase tracking-widest text-sm hover:text-primary transition-colors flex items-center gap-1" href="#">
+                    Đầy Đủ Thông Số Kỹ Thuật <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+<!-- Spec Item -->
+<div class="border-l border-outline-variant/30 pl-6">
+<p class="font-label text-on-surface-variant text-sm uppercase tracking-wider mb-2">Hệ Truyền Động</p>
+<p class="font-headline text-3xl font-medium text-on-background">Động Cơ Kép AWD</p>
+</div>
+<!-- Spec Item -->
+<div class="border-l border-outline-variant/30 pl-6">
+<p class="font-label text-on-surface-variant text-sm uppercase tracking-wider mb-2">Công Suất Đầu Ra</p>
+<div class="flex items-baseline gap-2">
+<p class="font-headline text-4xl font-bold text-tertiary tracking-tighter">1,020</p>
+<p class="font-label text-on-background text-sm">Mã Lực</p>
+</div>
+</div>
+<!-- Spec Item -->
+<div class="border-l border-outline-variant/30 pl-6">
+<p class="font-label text-on-surface-variant text-sm uppercase tracking-wider mb-2">0 - 60 MPH</p>
+<div class="flex items-baseline gap-2">
+<p class="font-headline text-4xl font-bold text-tertiary tracking-tighter">1.9</p>
+<p class="font-label text-on-background text-sm">GIÂY</p>
+</div>
+</div>
+<!-- Spec Item -->
+<div class="border-l border-outline-variant/30 pl-6">
+<p class="font-label text-on-surface-variant text-sm uppercase tracking-wider mb-2">Phạm Vi Ước Tính</p>
+<div class="flex items-baseline gap-2">
+<p class="font-headline text-4xl font-bold text-tertiary tracking-tighter">410</p>
+<p class="font-label text-on-background text-sm">DẶM</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Description Section (Asymmetrical) -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+<div class="md:col-span-5 order-2 md:order-1 space-y-6">
+<h3 class="font-headline text-4xl font-bold tracking-tight text-on-background">Được Điêu Khắc Bởi Không Khí. <br/>Được Thúc Đẩy Bởi Electron.</h3>
+<p class="font-body text-on-surface-variant text-lg leading-relaxed">
+                    APEX-V không chỉ cắt ngang gió; nó điều khiển gió. Mọi bề mặt, từ bộ chia gió phía trước mạnh mẽ đến bộ khuếch tán phía sau chủ động, đều được tối ưu hóa về mặt toán học để tạo ra lực ép xuống tối đa với lực cản tối thiểu. 
+                </p>
+<p class="font-body text-on-surface-variant text-lg leading-relaxed">
+                    Bên trong, cabin là một nơi tôn nghiêm của sự tập trung. Chúng tôi đã loại bỏ những thứ không liên quan, chỉ để lại những giao diện thiết yếu cần thiết cho sự kiểm soát tuyệt đối. Nó giống như buồng lái của phi công hơn là nội thất ô tô.
+                </p>
+</div>
+<div class="md:col-span-7 order-1 md:order-2 bg-surface-container-low rounded-sm overflow-hidden h-[614px]">
+<img alt="APEX-V in motion" class="w-full h-full object-cover" data-alt="Dramatic low angle shot of an aggressive modern sports car driving through a neon lit tunnel at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNigagZV7IhF5kGxPJSEnINYtOHM4p7AzR07-eEItcw5mP__Mf1xXvh-KUjDoMmk6Wno-IcvNbt4HwvsqMuzZrqjK96tq_52eKwWBRpl0mbYgmPpdNez0fgx2lnNTXgFhWeA2f_mKl09h3vypWBFdDsMRBq8YSMHZOPOvLsoGR6055RwN7GcUP7ltheyO-3rjIUokmIY4M21s96VNkutY9x1yEjWWg3_JVJRi82JXrQIPLlAbQFeHHuKrd_5-dUatFJXhEbeu_9fek"/>
+</div>
+</section>
+<!-- Related Vehicles (Tonal Layering & Grid) -->
+<section class="pt-12">
+<div class="flex justify-between items-end mb-8">
+<h2 class="font-headline text-2xl font-bold text-on-background tracking-tight">Khám Phá Dòng Sản Phẩm</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Related Card 1 -->
+<a class="group flex flex-col bg-surface-container-lowest hover:bg-surface-container-low transition-colors duration-300 rounded-sm overflow-hidden" href="#">
+<div class="aspect-[4/3] bg-surface-container-high overflow-hidden">
+<img alt="Kinetic S-Class" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Sleek white luxury sedan parked in a modern minimalist garage setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn5PR_U_VzJRT3aQo4XAdmwVEeaVkw2HssG-PxkTIzpmDr9GDforsrztQ_EfphzJG42EUw8DNt2e4d4N4TlWVltY30ytbyDuYK5Yuetv3NLLgWoveVX75e4HQDKogrHbqA2mYEbWstWZtYLv26ZqmqdrQ4QVdEXQ20leOD-e7hX7_2f0Dm-RqY6GrVgzHnmvVkOW15VoeIZvIOlepnjRR2909e3J9aq9pXdm7PvgjIyjoi8XgiTLXDtpQnvnbWULG0lL506hnXlURb"/>
+</div>
+<div class="p-6">
+<h4 class="font-headline text-xl font-medium text-on-background">LUX-S Sedan</h4>
+<p class="font-body text-sm text-on-surface-variant mt-1">Sự Thoải Mái Của Giám Đốc. Tâm Hồn Điện.</p>
+<p class="font-headline text-primary mt-4 font-medium">Từ $89,000</p>
+</div>
+</a>
+<!-- Related Card 2 -->
+<a class="group flex flex-col bg-surface-container-lowest hover:bg-surface-container-low transition-colors duration-300 rounded-sm overflow-hidden" href="#">
+<div class="aspect-[4/3] bg-surface-container-high overflow-hidden">
+<img alt="Kinetic X-Class SUV" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Dark imposing luxury electric SUV parked on a mountain road at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIuS_g0tQ_c8LSXtTyaR21liVqUxyjK9CrmcBIVXtQdYduWLsuICBfo_H2gnrSx2y4KwkooDAXBQO0aUgJN7zNNvhs3k2B8RPnwl5xE6W9pKJq7theYQcppGk-B6E1iAp1GoYmk3Da6rCSySq36kp1TKPx6LAG7LrRbf5Yn2IvE-Q5alwA5_Fkyze5pj9P0POMIiFzAVilIcHgw46sBnjOJvcHyJ4B_hD2aw5eLZY7Vrz2Arql-G0DFYSFYynA918y329Z_2dC-vUy"/>
+</div>
+<div class="p-6">
+<h4 class="font-headline text-xl font-medium text-on-background">TERRA-X SUV</h4>
+<p class="font-body text-sm text-on-surface-variant mt-1">Tiện Ích Không Giới Hạn. Không Khí Thải.</p>
+<p class="font-headline text-primary mt-4 font-medium">Từ $95,000</p>
+</div>
+</a>
+<!-- Related Card 3 -->
+<a class="group flex flex-col bg-surface-container-lowest hover:bg-surface-container-low transition-colors duration-300 rounded-sm overflow-hidden" href="#">
+<div class="aspect-[4/3] bg-surface-container-high overflow-hidden">
+<img alt="Kinetic Moto-E" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Sleek electric motorcycle with futuristic styling parked in an urban alleyway" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi_UXH2cQJmcQ7yGYqopkSuNWaQKLZj3wlR8gycFbTtTeYNycMmCataQjG-OtqOeVS0mwq-FlOAY7jv5NxyYgjEjMFmzCnany95JAy2xiQ1r0IdOG-ANXw7D8azdmXZX_ZgoScZ9YOJou523cMeZabkzH-e6EZWvAkmKOHOS2exGQ8Ir3RGgMKjlMjQA9-mlY7gOXpey3qpp0Elv1TZZWltOFHIWOMzKwD8ca4QTUUi_ak-HOpuu9je-uaDFqAXkicEsZSUv9eAYE8"/>
+</div>
+<div class="p-6">
+<h4 class="font-headline text-xl font-medium text-on-background">MOTO-E Pro</h4>
+<p class="font-body text-sm text-on-surface-variant mt-1">Sự chính xác trên hai bánh.</p>
+<p class="font-headline text-primary mt-4 font-medium">Từ $24,500</p>
+</div>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#121416] w-full py-16 mt-12 bg-[#1a1c1e] flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-[1440px] mx-auto px-8">
+<!-- Brand & Copyright -->
+<div class="md:col-span-2 flex flex-col justify-between">
+<a class="text-xl font-black text-white font-['Space_Grotesk'] tracking-tighter" href="#">
+                    KINETIC
+                </a>
+<p class="text-[#b6c4ff] font-['Manrope'] text-sm uppercase tracking-widest mt-8 md:mt-0">
+                    © 2024 KINETIC GALLERY. ĐÃ ĐĂNG KÝ BẢN QUYỀN. KỸ THUẬT CHÍNH XÁC.
+                </p>
+</div>
+<!-- Links Column 1 -->
+<div class="flex flex-col gap-4 font-['Manrope'] text-sm uppercase tracking-widest">
+<a class="text-zinc-500 hover:text-[#b6c4ff] transition-colors opacity-100 hover:opacity-80" href="#">Phòng Trưng Bày</a>
+<a class="text-zinc-500 hover:text-[#b6c4ff] transition-colors opacity-100 hover:opacity-80" href="#">Công Nghệ EV</a>
+<a class="text-zinc-500 hover:text-[#b6c4ff] transition-colors opacity-100 hover:opacity-80" href="#">Hàng Tồn Kho</a>
+</div>
+<!-- Links Column 2 -->
+<div class="flex flex-col gap-4 font-['Manrope'] text-sm uppercase tracking-widest">
+<a class="text-zinc-500 hover:text-[#b6c4ff] transition-colors opacity-100 hover:opacity-80" href="#">Chính Sách Bảo Mật</a>
+<a class="text-zinc-500 hover:text-[#b6c4ff] transition-colors opacity-100 hover:opacity-80" href="#">Điều Khoản Dịch Vụ</a>
+<a class="text-zinc-500 hover:text-[#b6c4ff] transition-colors opacity-100 hover:opacity-80" href="#">Liên Hệ</a>
+</div>
+</div>
+</footer>
+</body></html>

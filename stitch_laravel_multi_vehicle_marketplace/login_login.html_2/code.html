@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kinetic Gallery - Đăng nhập</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#121416",
+                    "primary-container": "#2962ff",
+                    "on-background": "#e2e2e5",
+                    "on-primary-fixed-variant": "#003ab3",
+                    "inverse-primary": "#004ee8",
+                    "outline": "#8d90a2",
+                    "on-tertiary-fixed": "#001f24",
+                    "inverse-surface": "#e2e2e5",
+                    "on-primary-fixed": "#001550",
+                    "secondary": "#c1c6d7",
+                    "primary": "#b6c4ff",
+                    "tertiary-fixed-dim": "#00daf3",
+                    "tertiary": "#00daf3",
+                    "surface-dim": "#121416",
+                    "surface-tint": "#b6c4ff",
+                    "surface": "#121416",
+                    "on-tertiary": "#00363d",
+                    "outline-variant": "#434656",
+                    "on-tertiary-container": "#e6fbff",
+                    "on-tertiary-fixed-variant": "#004f58",
+                    "on-secondary-container": "#b3b8c8",
+                    "secondary-fixed-dim": "#c1c6d7",
+                    "on-error": "#690005",
+                    "surface-container-lowest": "#0c0e10",
+                    "primary-fixed": "#dce1ff",
+                    "error-container": "#93000a",
+                    "surface-container-highest": "#333537",
+                    "surface-container-low": "#1a1c1e",
+                    "on-surface-variant": "#c3c5d8",
+                    "tertiary-container": "#007d8c",
+                    "primary-fixed-dim": "#b6c4ff",
+                    "on-primary": "#002780",
+                    "secondary-container": "#444956",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#414754",
+                    "on-secondary": "#2b303d",
+                    "tertiary-fixed": "#9cf0ff",
+                    "surface-bright": "#38393c",
+                    "surface-container": "#1e2022",
+                    "error": "#ffb4ab",
+                    "surface-container-high": "#282a2c",
+                    "secondary-fixed": "#dde2f3",
+                    "on-primary-container": "#f7f5ff",
+                    "surface-variant": "#333537",
+                    "on-secondary-fixed": "#161c27",
+                    "inverse-on-surface": "#2f3133",
+                    "on-surface": "#e2e2e5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk", "sans-serif"],
+                    "body": ["Manrope", "sans-serif"],
+                    "label": ["Manrope", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+<!-- TopNavBar (Suppressed as per rules for transactional pages like Login, but requested in prompt. Resolving conflict: Contextual logic overrides prompt request for transactional flows, but I will include a simplified header variant to anchor the brand without full global nav) -->
+<header class="sticky top-0 w-full z-50 bg-zinc-950/60 backdrop-blur-2xl shadow-[0_20px_50px_rgba(182,196,255,0.05)] bg-zinc-900/80">
+<div class="flex justify-between items-center max-w-[1440px] mx-auto px-8 py-5">
+<a class="text-2xl font-headline font-bold tracking-tighter text-[#b6c4ff]" href="#">KINETIC</a>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex items-center justify-center relative w-full h-full min-h-[calc(100vh-160px)]">
+<!-- Ambient Background Image -->
+<div class="absolute inset-0 w-full h-full bg-surface-container-lowest z-0 overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10 w-full md:w-2/3"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 h-full"></div>
+<img alt="" class="object-cover w-full h-full opacity-40 mix-blend-luminosity" data-alt="sleek modern luxury sports car interior with glowing dashboard displays and premium leather textures in dim atmospheric lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkqFvxOEbFQ6oVy9mLsAQ_66o923DjIoAmSidH4fXHV8NENd5e5wY_YBTslpcWMUMTAdmeCfH4IoxR8rgGsHmD8wj3CVTbYoEX5QEl5kWcfOMSdFw1qD8fzFHsp9mtirKxUyV95xjdcj0jC-wNkabinQnKgq_fqIf6-_Gn-PncSd5QS_12a2yVOg--D4oYuFnfiFOiVSe4Uny0Up6PuEYh0OlWsfnF30qU6bwthBm_NCfgW0Yw0U5zfu8MeSd9W4dnpXWF55fwMkDw"/>
+</div>
+<!-- Login Form Container -->
+<div class="relative z-20 w-full max-w-md px-6 py-12 md:px-10 md:py-16 bg-surface-variant/60 backdrop-blur-2xl rounded-lg mx-4 border border-outline-variant/15 shadow-[0_48px_100px_-20px_rgba(182,196,255,0.08)]">
+<div class="mb-10 text-left">
+<h1 class="font-headline text-4xl font-bold tracking-tight text-on-background mb-2">Cổng Truy Cập</h1>
+<p class="font-body text-base text-on-surface-variant">Xác thực để vào bộ sưu tập kinetic.</p>
+</div>
+<form class="space-y-6">
+<!-- Email Field -->
+<div class="space-y-2">
+<label class="block font-label text-sm font-medium text-on-surface-variant" for="email">Địa chỉ Email</label>
+<div class="relative">
+<input class="w-full bg-surface-container-highest border border-outline-variant/15 rounded-sm px-4 py-3 text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors font-body placeholder-outline/50" id="email" name="email" placeholder="pilot@kinetic.io" required="" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<label class="block font-label text-sm font-medium text-on-surface-variant" for="password">Giao thức Bảo mật</label>
+<a class="text-xs font-label text-tertiary hover:text-primary transition-colors" href="#">Quên Mật khẩu?</a>
+</div>
+<div class="relative">
+<input class="w-full bg-surface-container-highest border border-outline-variant/15 rounded-sm px-4 py-3 text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors font-body placeholder-outline/50" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+</div>
+</div>
+<!-- Remember Me -->
+<div class="flex items-center mt-4">
+<input class="w-4 h-4 rounded-sm bg-surface-container-highest border-outline-variant text-primary focus:ring-primary focus:ring-offset-background" id="remember" name="remember" type="checkbox"/>
+<label class="ml-2 font-label text-sm text-on-surface-variant cursor-pointer" for="remember">Duy trì kết nối</label>
+</div>
+<!-- Actions -->
+<div class="pt-4 space-y-4">
+<button class="w-full bg-gradient-to-r from-primary-container to-primary text-on-primary font-headline font-bold text-sm tracking-wide py-3.5 px-6 rounded-sm shadow-[0_0_20px_rgba(182,196,255,0.15)] hover:shadow-[0_0_30px_rgba(182,196,255,0.25)] transition-all duration-300 flex justify-center items-center gap-2" type="submit">
+<span>BẮT ĐẦU PHIÊN LÀM VIỆC</span>
+<span aria-hidden="true" class="material-symbols-outlined text-lg" data-icon="login" data-weight="fill">login</span>
+</button>
+<div class="text-center pt-2">
+<span class="font-body text-sm text-on-surface-variant">Người dùng mới? </span>
+<a class="font-body text-sm text-tertiary border-b border-transparent hover:border-tertiary transition-colors" href="#">Đăng ký Truy cập</a>
+</div>
+</div>
+</form>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="bg-[#121416] w-full py-16 bg-[#1a1c1e] z-10 relative">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-[1440px] mx-auto px-8">
+<div class="flex flex-col gap-4">
+<span class="text-xl font-black text-white font-headline tracking-tighter">KINETIC</span>
+<p class="font-['Manrope'] text-sm uppercase tracking-widest text-[#b6c4ff] mt-auto">© 2024 KINETIC GALLERY. ĐÃ ĐĂNG KÝ BẢN QUYỀN. KỸ THUẬT ĐỈNH CAO.</p>
+</div>
+<div class="flex flex-col gap-3">
+<a class="font-['Manrope'] text-sm uppercase tracking-widest text-zinc-500 hover:text-[#b6c4ff] transition-colors opacity-100 hover:opacity-80" href="#">Phòng Trưng Bày</a>
+<a class="font-['Manrope'] text-sm uppercase tracking-widest text-zinc-500 hover:text-[#b6c4ff] transition-colors opacity-100 hover:opacity-80" href="#">Công Nghệ EV</a>
+<a class="font-['Manrope'] text-sm uppercase tracking-widest text-zinc-500 hover:text-[#b6c4ff] transition-colors opacity-100 hover:opacity-80" href="#">Kho Xe</a>
+</div>
+<div class="flex flex-col gap-3">
+<a class="font-['Manrope'] text-sm uppercase tracking-widest text-zinc-500 hover:text-[#b6c4ff] transition-colors opacity-100 hover:opacity-80" href="#">Chính Sách Bảo Mật</a>
+<a class="font-['Manrope'] text-sm uppercase tracking-widest text-zinc-500 hover:text-[#b6c4ff] transition-colors opacity-100 hover:opacity-80" href="#">Điều Khoản Dịch Vụ</a>
+<a class="font-['Manrope'] text-sm uppercase tracking-widest text-zinc-500 hover:text-[#b6c4ff] transition-colors opacity-100 hover:opacity-80" href="#">Liên Hệ</a>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Spacer for 4 col grid alignment -->
+</div>
+</div>
+</footer>
+</body></html>

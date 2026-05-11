@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KINETIC - Inventory</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "background": "#121416",
+                      "primary-container": "#2962ff",
+                      "on-background": "#e2e2e5",
+                      "on-primary-fixed-variant": "#003ab3",
+                      "inverse-primary": "#004ee8",
+                      "outline": "#8d90a2",
+                      "on-tertiary-fixed": "#001f24",
+                      "inverse-surface": "#e2e2e5",
+                      "on-primary-fixed": "#001550",
+                      "secondary": "#c1c6d7",
+                      "primary": "#b6c4ff",
+                      "tertiary-fixed-dim": "#00daf3",
+                      "tertiary": "#00daf3",
+                      "surface-dim": "#121416",
+                      "surface-tint": "#b6c4ff",
+                      "surface": "#121416",
+                      "on-tertiary": "#00363d",
+                      "outline-variant": "#434656",
+                      "on-tertiary-container": "#e6fbff",
+                      "on-tertiary-fixed-variant": "#004f58",
+                      "on-secondary-container": "#b3b8c8",
+                      "secondary-fixed-dim": "#c1c6d7",
+                      "on-error": "#690005",
+                      "surface-container-lowest": "#0c0e10",
+                      "primary-fixed": "#dce1ff",
+                      "error-container": "#93000a",
+                      "surface-container-highest": "#333537",
+                      "surface-container-low": "#1a1c1e",
+                      "on-surface-variant": "#c3c5d8",
+                      "tertiary-container": "#007d8c",
+                      "primary-fixed-dim": "#b6c4ff",
+                      "on-primary": "#002780",
+                      "secondary-container": "#444956",
+                      "on-error-container": "#ffdad6",
+                      "on-secondary-fixed-variant": "#414754",
+                      "on-secondary": "#2b303d",
+                      "tertiary-fixed": "#9cf0ff",
+                      "surface-bright": "#38393c",
+                      "surface-container": "#1e2022",
+                      "error": "#ffb4ab",
+                      "surface-container-high": "#282a2c",
+                      "secondary-fixed": "#dde2f3",
+                      "on-primary-container": "#f7f5ff",
+                      "surface-variant": "#333537",
+                      "on-secondary-fixed": "#161c27",
+                      "inverse-on-surface": "#2f3133",
+                      "on-surface": "#e2e2e5"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {},
+              "fontFamily": {
+                      "headline": [
+                              "Space Grotesk", "sans-serif"
+                      ],
+                      "body": [
+                              "Manrope", "sans-serif"
+                      ],
+                      "label": [
+                              "Manrope", "sans-serif"
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+          font-family: 'Material Symbols Outlined';
+          font-weight: normal;
+          font-style: normal;
+          font-size: 24px;
+          line-height: 1;
+          letter-spacing: normal;
+          text-transform: none;
+          display: inline-block;
+          white-space: nowrap;
+          word-wrap: normal;
+          direction: ltr;
+          -webkit-font-feature-settings: 'liga';
+          -webkit-font-smoothing: antialiased;
+        }
+        
+        .glass-panel {
+            background: rgba(51, 53, 55, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+
+        .cta-gradient {
+            background: linear-gradient(135deg, #2962ff 0%, #b6c4ff 100%);
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-zinc-950/60 backdrop-blur-2xl sticky top-0 w-full z-50 shadow-[0_20px_50px_rgba(182,196,255,0.05)] border-b-0 border-transparent">
+<div class="flex justify-between items-center max-w-[1440px] mx-auto px-8 py-5">
+<a class="text-2xl font-bold tracking-tighter text-[#b6c4ff] font-['Space_Grotesk'] tracking-tight" href="#">KINETIC</a>
+<div class="hidden md:flex gap-8 items-center font-['Space_Grotesk'] tracking-tight">
+<a class="text-zinc-400 font-medium hover:text-white hover:bg-zinc-800/50 transition-all duration-300 px-3 py-1 rounded" href="#">Cars</a>
+<a class="text-[#b6c4ff] font-bold border-b-2 border-[#00daf3] pb-1 px-3" href="#">Motorcycles</a>
+<a class="text-zinc-400 font-medium hover:text-white hover:bg-zinc-800/50 transition-all duration-300 px-3 py-1 rounded" href="#">Electric</a>
+<a class="text-zinc-400 font-medium hover:text-white hover:bg-zinc-800/50 transition-all duration-300 px-3 py-1 rounded" href="#">Showroom</a>
+<a class="text-zinc-400 font-medium hover:text-white hover:bg-zinc-800/50 transition-all duration-300 px-3 py-1 rounded" href="#">About</a>
+</div>
+<div class="flex items-center gap-4 text-[#b6c4ff]">
+<button aria-label="shopping_cart" class="hover:bg-zinc-800/50 p-2 rounded transition-all duration-300 active:scale-95 ease-in-out">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button aria-label="account_circle" class="hover:bg-zinc-800/50 p-2 rounded transition-all duration-300 active:scale-95 ease-in-out">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow max-w-[1440px] w-full mx-auto px-4 md:px-8 py-8 flex flex-col gap-8">
+<!-- Breadcrumbs & Header -->
+<header class="flex flex-col gap-4">
+<nav aria-label="Breadcrumb" class="text-sm font-label text-on-surface-variant flex items-center gap-2">
+<a class="hover:text-primary transition-colors" href="#">Showroom</a>
+<span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
+<span class="text-primary font-medium">Inventory</span>
+</nav>
+<h1 class="font-headline text-4xl md:text-5xl font-bold tracking-tight text-on-background">Available Inventory</h1>
+</header>
+<div class="flex flex-col md:flex-row gap-12">
+<!-- Filters Sidebar -->
+<aside class="w-full md:w-72 flex-shrink-0 flex flex-col gap-8">
+<!-- Filter Section: Type -->
+<div class="bg-surface-container-low p-6 rounded-lg flex flex-col gap-4">
+<h3 class="font-headline text-lg font-semibold text-primary">Vehicle Type</h3>
+<div class="flex flex-col gap-3 font-label text-sm text-on-surface">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="form-checkbox bg-surface-container-highest border-outline-variant rounded-sm text-primary focus:ring-primary focus:ring-offset-background" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Cars</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="form-checkbox bg-surface-container-highest border-outline-variant rounded-sm text-primary focus:ring-primary focus:ring-offset-background" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Motorcycles</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="form-checkbox bg-surface-container-highest border-outline-variant rounded-sm text-primary focus:ring-primary focus:ring-offset-background" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Electric Vehicles</span>
+</label>
+</div>
+</div>
+<!-- Filter Section: Price -->
+<div class="bg-surface-container-low p-6 rounded-lg flex flex-col gap-4">
+<h3 class="font-headline text-lg font-semibold text-primary">Price Range</h3>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<div class="flex-1">
+<label class="block text-xs font-label text-on-surface-variant mb-1">Min</label>
+<input class="w-full bg-surface-container-highest border border-outline-variant/15 rounded-sm text-on-background px-3 py-2 text-sm focus:ring-primary focus:border-primary placeholder-on-surface-variant/50" placeholder="$0" type="number"/>
+</div>
+<span class="text-outline mt-5">-</span>
+<div class="flex-1">
+<label class="block text-xs font-label text-on-surface-variant mb-1">Max</label>
+<input class="w-full bg-surface-container-highest border border-outline-variant/15 rounded-sm text-on-background px-3 py-2 text-sm focus:ring-primary focus:border-primary placeholder-on-surface-variant/50" placeholder="$200k+" type="number"/>
+</div>
+</div>
+<input class="w-full accent-tertiary cursor-pointer" max="200000" min="0" step="5000" type="range"/>
+</div>
+</div>
+<!-- Filter Section: Brand -->
+<div class="bg-surface-container-low p-6 rounded-lg flex flex-col gap-4">
+<h3 class="font-headline text-lg font-semibold text-primary">Brand</h3>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 bg-surface-container-highest text-on-surface font-label text-sm rounded-full border border-tertiary text-tertiary">Kinetic</button>
+<button class="px-4 py-2 bg-surface-container-highest text-on-surface font-label text-sm rounded-full border border-outline-variant/15 hover:border-primary transition-colors">Aero</button>
+<button class="px-4 py-2 bg-surface-container-highest text-on-surface font-label text-sm rounded-full border border-outline-variant/15 hover:border-primary transition-colors">Volt</button>
+<button class="px-4 py-2 bg-surface-container-highest text-on-surface font-label text-sm rounded-full border border-outline-variant/15 hover:border-primary transition-colors">Apex</button>
+</div>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="flex-grow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+<!-- Product Card 1 -->
+<article class="group bg-surface-container-low rounded-lg overflow-hidden flex flex-col transition-all duration-300 hover:bg-surface-container-high relative">
+<div class="aspect-[4/3] w-full bg-surface-container-high relative overflow-hidden">
+<img alt="Product" class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="Dark, moody studio shot of a high-performance sports car with sleek lines and metallic dark grey finish, dramatic rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmMBEClJZnf34hU7lGVhUkET6GZ-hDyxioTguYtE7QGg0V9F9qQwn7UbKySGLcoh-Ucd6g7nr-ZRQekl547djlGTVUet9d8AoDAx6P1zkwNRcw4xr5TwTUGulJUxBLlOZFcYPb5ub3Rv-xRR7_19LsdRj_YIYn5CKNHLJ7rti5kfLg3PM6rcCpZL2DRxSKxW8UFszaID7_KU8VBmK3d8gyeaAViqy3PmG5zczi2B_-4KSS2xex_CtVQagbMH9A3VBOehxaG4TWVkpY"/>
+<div class="absolute top-4 left-4 glass-panel px-3 py-1 rounded-sm flex items-center gap-1 text-tertiary font-label text-xs tracking-wider uppercase">
+<span class="material-symbols-outlined text-[14px]" data-icon="bolt" data-weight="fill" style="font-variation-settings: 'FILL' 1;">bolt</span> EV
+                        </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h2 class="font-headline text-2xl font-semibold text-on-background mb-1">KINETIC R-TYPE</h2>
+<p class="font-label text-sm text-on-surface-variant">Dual Motor AWD Performance</p>
+</div>
+<p class="font-headline text-xl font-bold text-primary">$89,500</p>
+</div>
+<div class="flex gap-4 mb-8 text-sm font-label text-on-surface-variant">
+<div class="flex flex-col">
+<span class="text-xs uppercase tracking-wider mb-1 opacity-60">0-60 mph</span>
+<span class="font-semibold text-on-surface">2.8s</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs uppercase tracking-wider mb-1 opacity-60">Range</span>
+<span class="font-semibold text-on-surface">340 mi</span>
+</div>
+</div>
+<div class="mt-auto">
+<button class="w-full py-3 px-6 rounded-sm border border-outline-variant/15 text-primary font-headline font-semibold uppercase tracking-wider hover:bg-surface-container-highest transition-colors flex items-center justify-center gap-2 group-hover:border-primary/50">
+                                View Details
+                                <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 2 -->
+<article class="group bg-surface-container-low rounded-lg overflow-hidden flex flex-col transition-all duration-300 hover:bg-surface-container-high relative">
+<div class="aspect-[4/3] w-full bg-surface-container-high relative overflow-hidden">
+<img alt="Product" class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="Close up dramatic shot of a modern electric motorcycle in a dark concrete tunnel with electric blue accent lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa12txztD7PgkpmURLIaOfXitEHMSXd83bTlFU2lL1DmSjaKsbzHjydmlgEynmIMkdfHDxDY5voYKRywP71aOqZDV0Cf0BhVT-BR5-pRIHeZzGpfog0UWz3eBTwqVn1DLgLQ9jyEgnyUZNrYpdL2rQntt8-vEkvgvUELMqAzBaM-B61ssr4xc0ELY8xY_qO0AzC4Qyhyo8wtN4Co4bJuIwaQMQ6MD8AwKU5s7QmTRzIk_mr8UK88ntJzGV28M1PyPTz0AMYHJUIAbj"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h2 class="font-headline text-2xl font-semibold text-on-background mb-1">KINETIC M-1</h2>
+<p class="font-label text-sm text-on-surface-variant">Urban Electric Commuter</p>
+</div>
+<p class="font-headline text-xl font-bold text-primary">$18,200</p>
+</div>
+<div class="flex gap-4 mb-8 text-sm font-label text-on-surface-variant">
+<div class="flex flex-col">
+<span class="text-xs uppercase tracking-wider mb-1 opacity-60">Top Speed</span>
+<span class="font-semibold text-on-surface">120 mph</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs uppercase tracking-wider mb-1 opacity-60">Range</span>
+<span class="font-semibold text-on-surface">150 mi</span>
+</div>
+</div>
+<div class="mt-auto">
+<button class="w-full py-3 px-6 rounded-sm border border-outline-variant/15 text-primary font-headline font-semibold uppercase tracking-wider hover:bg-surface-container-highest transition-colors flex items-center justify-center gap-2 group-hover:border-primary/50">
+                                View Details
+                                <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 3 -->
+<article class="group bg-surface-container-low rounded-lg overflow-hidden flex flex-col transition-all duration-300 hover:bg-surface-container-high relative">
+<div class="aspect-[4/3] w-full bg-surface-container-high relative overflow-hidden">
+<img alt="Product" class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="Sleek silver luxury sports coupe parked in an industrial setting with dramatic shadows and sharp metallic reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNW1nMP_hniZUyKrCBNWijBfA8g05dcvvhZclJxr3sbIN2NbTJjfg5S0S1Xf_envFBflvXzN0b-ZGu-eFHY2tStu1HKIDwT9NrVXz67e8KncAr12f4eQ9EJjssI_yxL0boe06gipWRPU2hxNpV-tk8l-ynB6xrYyyBs2ADYvdbWUpJVDkqByBk5grfKiErRxAOGs7p4XuO5TOzIUBdaMfbEBCi2aHZdLaTakXKsTFhKzxWoN-NkSc-iXkXe1BcByLpUZ9Lo3YAINSQ"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h2 class="font-headline text-2xl font-semibold text-on-background mb-1">KINETIC GT</h2>
+<p class="font-label text-sm text-on-surface-variant">Grand Touring V8</p>
+</div>
+<p class="font-headline text-xl font-bold text-primary">$145,000</p>
+</div>
+<div class="flex gap-4 mb-8 text-sm font-label text-on-surface-variant">
+<div class="flex flex-col">
+<span class="text-xs uppercase tracking-wider mb-1 opacity-60">Horsepower</span>
+<span class="font-semibold text-on-surface">620 hp</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs uppercase tracking-wider mb-1 opacity-60">Torque</span>
+<span class="font-semibold text-on-surface">590 lb-ft</span>
+</div>
+</div>
+<div class="mt-auto">
+<button class="w-full py-3 px-6 rounded-sm border border-outline-variant/15 text-primary font-headline font-semibold uppercase tracking-wider hover:bg-surface-container-highest transition-colors flex items-center justify-center gap-2 group-hover:border-primary/50">
+                                View Details
+                                <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#121416] w-full py-16 grid grid-cols-1 md:grid-cols-4 gap-12 max-w-[1440px] mx-auto px-8 border-t-0">
+<div class="flex flex-col gap-6">
+<span class="text-xl font-black text-white font-['Space_Grotesk']">KINETIC</span>
+<p class="font-['Manrope'] text-sm text-zinc-500 uppercase tracking-widest leading-loose max-w-xs">
+                Precision engineering meets digital artistry.
+            </p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-['Manrope'] text-sm font-bold text-white uppercase tracking-widest mb-2">Showroom</h4>
+<a class="font-['Manrope'] text-sm uppercase tracking-widest text-[#00daf3] opacity-100 hover:opacity-80 transition-colors" href="#">Inventory</a>
+<a class="font-['Manrope'] text-sm uppercase tracking-widest text-zinc-500 hover:text-[#b6c4ff] transition-colors" href="#">EV Technology</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-['Manrope'] text-sm font-bold text-white uppercase tracking-widest mb-2">Legal</h4>
+<a class="font-['Manrope'] text-sm uppercase tracking-widest text-zinc-500 hover:text-[#b6c4ff] transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Manrope'] text-sm uppercase tracking-widest text-zinc-500 hover:text-[#b6c4ff] transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-['Manrope'] text-sm font-bold text-white uppercase tracking-widest mb-2">Connect</h4>
+<a class="font-['Manrope'] text-sm uppercase tracking-widest text-zinc-500 hover:text-[#b6c4ff] transition-colors" href="#">Contact</a>
+</div>
+<div class="col-span-1 md:col-span-4 mt-12 pt-8 border-t border-[#1a1c1e] text-center">
+<p class="font-['Manrope'] text-sm uppercase tracking-widest text-zinc-500">© 2024 KINETIC GALLERY. ALL RIGHTS RESERVED. PRECISION ENGINEERED.</p>
+</div>
+</footer>
+</body></html>
